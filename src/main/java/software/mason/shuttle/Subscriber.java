@@ -2,7 +2,7 @@ package software.mason.shuttle;
 
 import java.lang.reflect.Method;
 
-public final class Subscriber {
+final class Subscriber {
 
     private final Object declaringClass;
     private final Method method;
