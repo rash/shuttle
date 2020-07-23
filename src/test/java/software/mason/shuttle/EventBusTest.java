@@ -17,6 +17,16 @@ public class EventBusTest {
         assertEquals(EVENT_MESSAGE, stringHandler.getSum().toString());
     }
 
+    @Test
+    public void unregisteredListenerShouldNotHandleSubscribedEventType() {
+        var stringHandler = new StringHandler();
+        eventBus.register(stringHandler);
+        eventBus.push(EVENT_MESSAGE);
+        eventBus.unregister(stringHandler);
+        eventBus.push(EVENT_MESSAGE);
+        assertEquals(EVENT_MESSAGE, stringHandler.getSum().toString());
+    }
+
     @Test(expected = IllegalArgumentException.class)
     public void registeredInstanceShouldNotRegisterTwice() {
         var stringHandler = new StringHandler();
