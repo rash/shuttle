@@ -35,7 +35,7 @@ public final class EventBus {
                 if (isSubscriber(method)) {
                     var type = method.getParameters()[0].getType();
                     var subscribers = typeToSubscribersMap.get(type);
-                    subscribers.removeIf(subscriber -> subscriber.getMethod() == method);
+                    subscribers.removeIf(subscriber -> subscriber.getMethod().equals(method));
                 }
             }
         } else {
