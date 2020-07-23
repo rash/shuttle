@@ -10,7 +10,7 @@ Shuttle requires the use of a Java 10+ environment and has been tested with Java
 # Compilation
 
 To compile Shuttle, you must clone this repository.
-After you have cloned this repository, you must navigate to the directory this repository has been cloned in and run 'gradlew build' on Windows or './gradlew build' on macOS and Linux.
+After you have cloned this repository, you must navigate to the directory this repository has been cloned in and run `gradlew build` on Windows or `./gradlew build` on macOS and Linux.
 
 # Licensing
 
